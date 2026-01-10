@@ -5,7 +5,7 @@ A sleek, dark-themed Morse code encoder built with Django. Type text and see ins
 ![MorseCoder Screenshot](docs/screenshots/Screenshot(243).png)
 
 ## 📋 Table of Contents
-
+ 
 - [✨ Features](#-features)
 - [🖼️ Screenshots](#️-screenshots)
 - [🛠️ Technologies Used](#️-technologies-used)
