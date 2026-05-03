@@ -1,79 +1,86 @@
-# 🎯 MorseCoder - Real-time Text ↔ Morse Code Encoder
+<div align="center">
 
-A sleek, dark-themed Morse code encoder built with Django. Type text and see instant Morse output, then play it back with smooth WebAudio tones. Clean UI, responsive layout, and snappy UX.
+# MorseCoder
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Platform](https://img.shields.io/badge/platform-Web_Browser-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+**A sleek, dark-themed Morse code encoder built with Django for real-time text to Morse conversion.**
+
+</div>
 
 ![MorseCoder Screenshot](docs/screenshots/Screenshot(243).png)
 
-## 📋 Table of Contents
- 
-- [✨ Features](#-features)
-- [🖼️ Screenshots](#️-screenshots)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [📁 Project Structure](#-project-structure)
-- [🏗️ Architecture Overview](#️-architecture-overview)
-- [🚀 Installation & Setup](#-installation--setup)
-- [💻 Usage](#-usage)
-- [🔧 Configuration](#-configuration)
-- [📦 Dependencies](#-dependencies)
-- [📚 API Documentation](#-api-documentation)
-- [🤝 Contributing](#-contributing)
-- [👥 Contributors](#-contributors)
-- [📄 License](#-license)
-- [🔗 Useful Resources](#-useful-resources)
-- [🧪 Testing](#-testing)
-- [🚢 Deployment](#-deployment)
-- [🩺 Troubleshooting](#-troubleshooting)
-- [❓ FAQ](#-faq)
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Architecture Overview](#architecture-overview)
+- [Installation & Setup](#installation--setup)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Dependencies](#dependencies)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
+- [Useful Resources](#useful-resources)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Troubleshooting](#troubleshooting)
+- [FAQ](#faq)
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔤 Text to Morse, Instantly
+### Text to Morse, Instantly
 - **Live Encoding**: Debounced, real-time conversion as you type
 - **Standards-based Mapping**: Letters, numbers, and common punctuation
 - **Copy to Clipboard**: Quick copy of Morse output
 
-### 🔊 Smooth Audio Playback
+### Smooth Audio Playback
 - **WebAudio Tones**: Pure oscillator-based dit/dah playback
 - **Natural Timing**: ITU-style unit timing for letters/words
 - **No Audio Files**: Lightweight, fast, and consistent
 
-### 🎨 Modern Dark UI/UX
+### Modern Dark UI/UX
 - **Dark Theme**: Custom gradients, subtle shadows, accessible contrast
 - **Responsive Layout**: Optimized for mobile and desktop
 - **Bootstrap 5**: Familiar, ergonomic components
 
 ---
 
-## 🖼️ Screenshots
-
+## Screenshots
 
 ### Homepage
 ![Homepage](docs/screenshots/Screenshot(245).png)
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-### **Backend**
-- **Django 4.2** - Python web framework
-- **Python 3.10+** - Language runtime
-- **SQLite** - Default local database
+### Backend
+- **Django 4.2**: Python web framework
+- **Python 3.10+**: Language runtime
+- **SQLite**: Default local database
 
-### **Frontend**
+### Frontend
 - **HTML5, CSS3, JavaScript**
 - **Bootstrap 5** and **Bootstrap Icons**
 - **WebAudio API** for tone generation
 
-### **Dev & Ops**
+### Dev & Ops
 - **Git** and **pip**
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-```
+```text
 morseCoder/
 ├── src/
 │   ├── main/                    # Django project
@@ -100,19 +107,19 @@ morseCoder/
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
-- **Django MVC**: `urls.py` routes → `views.py` render templates or return JSON.
+- **Django MVC**: `urls.py` routes, `views.py` render templates or return JSON.
 - **Templates**: `base.html` wraps pages; `home.html` implements the UI; partials live in `templates/components/`.
 - **Static assets**: Custom dark theme CSS in `static/css/dark.css` and WebAudio logic in `static/js/audio.js`.
 - **Morse mapping**: `core/morse.py` contains the symbol mapping; view `text_translate` encodes server-side.
 - **Frontend behavior**: `home.html` uses Fetch API for live updates and delegates audio to `window.morseAudio`.
 
-Data flow: user input → fetch `/text_translate/` → JSON response → output textarea → optional audio playback.
+Data flow: user input, fetch `/text_translate/`, JSON response, output textarea, optional audio playback.
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -160,7 +167,7 @@ Data flow: user input → fetch `/text_translate/` → JSON response → output 
 
 ---
 
-## 💻 Usage
+## Usage
 
 1. Open the home page
 2. Type any text in the left panel
@@ -169,7 +176,7 @@ Data flow: user input → fetch `/text_translate/` → JSON response → output 
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 Key settings in `src/main/settings.py`:
 
@@ -189,7 +196,7 @@ For deployment, add `STATIC_ROOT` and run `collectstatic`.
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 Python runtime dependencies (representative):
 - Django 4.2.x
@@ -201,7 +208,7 @@ Add a `requirements.txt` and pin versions for reproducible builds.
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 ### Encode Text to Morse
 - **Endpoint**: `GET /text_translate/`
@@ -226,7 +233,7 @@ Notes:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!
 
@@ -243,11 +250,11 @@ Guidelines:
 
 ---
 
-## 👥 Contributors
+## Contributors
 
 <div align="center">
 
-### 🏆 Project Creators & Maintainers
+### Project Creators & Maintainers
 
 <table>
   <tr>
@@ -264,12 +271,11 @@ Guidelines:
   <tr>
     <td colspan="2" align="center"><i>Want to see your avatar here? Check the Contributing section and open a PR.</i></td>
   </tr>
-  
 </table>
 
 ---
 
-### 🤝 Want to Contribute?
+### Want to Contribute?
 
 We welcome contributions from the community!
 
@@ -282,13 +288,13 @@ We welcome contributions from the community!
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🔗 Useful Resources
+## Useful Resources
 
 ### Django
 - [Django Docs](https://docs.djangoproject.com/)
@@ -303,7 +309,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Run tests
 ```bash
@@ -318,7 +324,7 @@ pytest -q
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 1. Set environment variables (`DJANGO_SECRET_KEY`, `DJANGO_ALLOWED_HOSTS`, etc.).
 2. Configure static files:
@@ -339,7 +345,7 @@ For simple platforms (e.g., Render/Heroku), see their Django deployment guides.
 
 ---
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - Static files not loading
   - Ensure `STATICFILES_DIRS` is correct locally; set `STATIC_ROOT` in production.
@@ -354,12 +360,12 @@ For simple platforms (e.g., Render/Heroku), see their Django deployment guides.
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 - Why encode on the server instead of the client?
   - Keeps logic centralized and testable; clients remain thin.
 
-- Can I add Morse → Text decoding?
+- Can I add Morse to Text decoding?
   - Yes. Add a reverse mapping and a new endpoint or client-side parser.
 
 - How do I change tone frequency or timing?
@@ -367,6 +373,4 @@ For simple platforms (e.g., Render/Heroku), see their Django deployment guides.
 
 ---
 
-### 📦 Repository
-
-`morseCoder` on GitHub: `https://github.com/Huerte/morseCoder`
+&copy; 2026 [Huerte](https://github.com/Huerte). All Rights Reserved.
